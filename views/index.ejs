@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiger Dashboard</title>
+
+
+</head>
+<body>
+  <a href="/tigers">Create a new Tiger</a>
+  <h1>Display all the TIGERS! ROAR</h1>
+
+
+
+
+  <div class="show_tigers">
+    <% for(var t in tigers) { %>
+    <h4>Name: <%= tigers[t].name %></h4>
+    <h6>Skin Type: <%= tigers[t].skin %></h6>
+    <a href="/tigers/<%= tigers[t]._id %>">Show Info</a><br>
+    <a href="/tigers/<%= tigers[t]._id %>/edit ">Edit</a>
+    <form action="/tigers/<%= tigers[t]._id %>/destroy" method="post">
+      <input type="submit" value="Delete">
+    </form>
+    <hr>
+    <% } %>
+  </div>
+
+
+</body>
+</html>

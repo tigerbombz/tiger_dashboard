@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiger Dashboard</title>
+
+
+</head>
+<body>
+
+  <h1>Edit This Tiger!!</h1>
+  <form action="/tigers/<%= tigers._id%>" method="post">
+    Name: <input type="text" name="name" value="<%= tigers.name%>"><br>
+    Skin Type: <input type="text" name="skin" value="<%= tigers.skin%>"><br>
+    <input type="submit" value="Update">
+    <a href="/">Home</a>
+
+  </form>
+
+</body>
+</html>
